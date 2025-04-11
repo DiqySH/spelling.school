@@ -29,11 +29,16 @@ nav {
         gap: 1.5rem;
         display: flex;
         list-style: none;
+        transition: all ease-in-out 500ms;
         li {
             a {
                 text-decoration: none;
                 font-size: 1.25rem;
                 color: #59A9FE;
+                transition: all ease-in-out 100ms;
+                &:hover {
+                    color: #3870ab;
+                }
             }
         }
     }
@@ -56,14 +61,6 @@ main {
     padding: 1rem;
 }
 
-.light {
-    width: 2rem;
-    height: 2rem;
-    background-color: #111827;
-    border-radius: 25%;
-    position: absolute;
-}
-
 .dark {
     width: 100%;
     height: 100svh;
@@ -80,6 +77,10 @@ main {
     &:hover {
         cursor: pointer;
     }
+}
+
+input[type="checkbox"] {
+    display: none;
 }
 
 #container {
@@ -136,16 +137,20 @@ h1#judul {
     }
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-
 body:has(.awikwok:checked) {
     background-color: #111827;
     h1#judul {
         color: white;
     }
     nav {
+        background-color: #111827;
+    }
+    #hamburger {
+        #hamburgerStrip {
+        background-color: white;
+        }
+    }
+    ul#list {
         background-color: #111827;
     }
 }
@@ -169,17 +174,58 @@ body:has(.awikwok:checked) {
     gap: 1rem;
 }
 
-@media screen and (max-width: 970px) {
-    nav {
-        ul {
-            display: none;
-        }
+#hamburger {
+    flex-direction: column;
+    height: 2rem;
+    width: 2rem;
+    justify-content: space-between;
+    display: none;
+    z-index: 500;
+    &:hover {
+        cursor: pointer;
     }
+    #hamburgerStrip {
+        width: 100%;
+        height: 0.4rem;
+        background-color: #111827;
+        border-radius: 1rem;
+        transition: all ease-in-out 500ms;
+    }
+}
+
+.nav-section:has(#hamburgerTrigger:checked) {
+    ul#list {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 970px) {
     .hero-section {
         justify-content: center;
     }
 
     .hero {
         margin-top: 7.5rem;
+    }
+    #hamburger {
+        display: flex;
+    }
+    #navForMobile {
+        transform: translateX(0%);
+    }
+    .nav-section {
+        ul#list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            background-color: white;
+            height: 100svh;
+            width: 75%;
+            right: 0;
+            bottom: 0;
+            transform: translateX(100%);
+        }
     }
 }
