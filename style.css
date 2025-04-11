@@ -11,6 +11,9 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 200;
+    background-color: white;
+    padding: 0 1rem;
+    transition: all ease-in-out 500ms;
     .nav-section {
         max-width: 75rem;
         width: 100%;
@@ -108,9 +111,9 @@ main {
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 h1#judul {
@@ -120,7 +123,8 @@ h1#judul {
     z-index: 101;
     transition: all ease-in-out 500ms;
     color: #111827;
-    line-height: 120%;
+    line-height: 100%;
+    max-width: 30rem;
     span {
         display: flex;
         align-items: center;
@@ -141,6 +145,9 @@ body:has(.awikwok:checked) {
     h1#judul {
         color: white;
     }
+    nav {
+        background-color: #111827;
+    }
 }
 
 .column-sw {
@@ -160,4 +167,19 @@ body:has(.awikwok:checked) {
     display: flex;
     align-items: end;
     gap: 1rem;
+}
+
+@media screen and (max-width: 970px) {
+    nav {
+        ul {
+            display: none;
+        }
+    }
+    .hero-section {
+        justify-content: center;
+    }
+
+    .hero {
+        margin-top: 7.5rem;
+    }
 }
