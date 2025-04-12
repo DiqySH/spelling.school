@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <nav id="navbar">
@@ -119,6 +120,204 @@
                 </div>
             </div>
         </section>
+        <section style="padding: 60px 20px; max-width: 1200px; margin: auto; font-family: 'Gabarito', sans-serif;">
+            <style>
+              .card {
+                background: white;
+                border-radius: 12px;
+                padding: 30px 25px;
+                margin-bottom: 40px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeSlideUp 0.8s ease forwards;
+              }
+          
+              .card:nth-child(1) { animation-delay: 0.1s; }
+              .card:nth-child(2) { animation-delay: 0.2s; }
+              .card:nth-child(3) { animation-delay: 0.3s; }
+              .card:nth-child(4) { animation-delay: 0.4s; }
+              .card:nth-child(5) { animation-delay: 0.5s; }
+          
+              @keyframes fadeSlideUp {
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+          
+              .card h2 {
+                font-size: 22px;
+                margin-bottom: 12px;
+              }
+          
+              .card p {
+                font-size: 16px;
+                color: #333;
+                line-height: 1.6;
+              }
+          
+              .badge {
+                background-color: #eee;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-family: "Gabarito", sans-serif;
+                display: inline-block;
+                margin-top: 10px;
+              }
+          
+              .cta {
+                text-align: center;
+                margin-top: 40px;
+              }
+          
+              .cta a {
+                background-color: #f77f00;
+                text-decoration: none;
+                padding: 14px 30px;
+                border-radius: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+                display: inline-block;
+                font-weight: 500;
+                color: black;
+              }
+          
+              .cta a:hover {
+                background-color: #d66300;
+              }
+            </style>
+          
+            <!-- Card 1 -->
+            <div class="card" style="border-left: 5px solid #e76f51;">
+              <h2>🏅 Gamified Learning = Motivated Kids</h2>
+              <p>
+                Earn badges. Level up. Unlock cool rewards. Our platform turns learning into an adventure, keeping kids
+                <strong>motivated, focused</strong>, and eager to come back for more.
+              </p>
+            </div>
+          
+            <!-- Card 2 -->
+            <div class="card" style="border-left: 5px solid #6a4c93;">
+              <h2>✍️ Customizable or Ready-to-Go</h2>
+              <p>
+                Want your child to learn specific words? Enter them anytime. Don’t know where to start?
+                No worries—our expertly designed curriculum has you covered.
+              </p>
+            </div>
+          
+            <!-- Card 3 -->
+            <div class="card" style="border-left: 5px solid #f28482;">
+              <h2>👩‍👧 Made by a Mom Who Gets It</h2>
+              <p>
+                After struggling to find a quality spelling system for her own kids, our founder built this platform from scratch.
+                Her goal? Make spelling simple, effective, and enjoyable for every family.
+              </p>
+            </div>
+          
+            <!-- Card 4 -->
+            <div class="card" style="border-left: 5px solid #2a9d8f;">
+              <h2>🧠 For Kids, Teens, and Even Adults!</h2>
+              <p>
+                Whether your child is just starting out, learning English as a second language, or prepping for a spelling bee,
+                our system grows with them. Even adults can benefit!
+              </p>
+              <div class="badge">supercalifragilisticexpialidocious</div>
+              <p>(We teach that one too!)</p>
+            </div>
+          
+            <!-- CTA Button -->
+            <div class="cta">
+              <a href="#">Sign Up Now!</a>
+            </div>
+          
+          </section>
+          <footer style="background-color: #2a2a2a; color: white; padding: 40px 20px; font-family: 'Gabarito', sans-serif; width: 100%;">
+            <style>
+              .footer-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: auto;
+                gap: 20px;
+                animation: fadeSlideUp 0.8s ease forwards;
+              }
+          
+              .footer-col {
+                flex: 1 1 200px;
+                min-width: 200px;
+              }
+          
+              .footer-col h3 {
+                font-size: 18px;
+                margin-bottom: 14px;
+                color: #f77f00;
+              }
+          
+              .footer-col ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+          
+              .footer-col ul li {
+                margin-bottom: 10px;
+              }
+          
+              .footer-col ul li a {
+                color: #ccc;
+                text-decoration: none;
+                transition: color 0.2s ease;
+              }
+          
+              .footer-col ul li a:hover {
+                color: white;
+              }
+          
+              .footer-bottom {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 14px;
+                color: #aaa;
+              }
+            </style>
+          
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h3>Spelling.School</h3>
+                <p style="line-height: 1.6; color: #ccc;">
+                  Fun, effective spelling mastery for kids, teens, and even adults. Built with love by a mom who gets it.
+                </p>
+              </div>
+          
+              <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="#">How It Works</a></li>
+                  <li><a href="#">For Parents</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-col">
+                <h3>Connect</h3>
+                <ul>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="footer-bottom">
+              © 2025 Spelling.School. All rights reserved.
+            </div>
+          </footer>
+          
     </main>
     <script src="./main.js"></script>
 </body>
